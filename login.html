@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    
+    <div id="loginForm">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="loginError" style="color: red; display: none;">Login failed. Please try again.</p>
+    </div>
+
+    <div id="converter">
+        <h2>Currency Converter</h2>
+        <input type="number" id="amount" placeholder="Amount" value="1">
+        <select id="fromCurrency">
+            <option value="USD">USD - American Dollar</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="GBP">GBP - British Pound</option>
+        </select>
+        <select id="toCurrency">
+            <option value="INR">INR - Indian Rupee</option>
+            <option value="JPY">JPY - Japanese Yen</option>
+            <option value="TRY">TRY - Turkish Lira</option>
+        </select>
+        <button onclick="convertCurrency()">Convert</button>
+        <p id="result"></p>
+        <p id="apiError" style="color: red; display: none;">Failed to fetch conversion rate. Please try again later.</p>
+    </div>
+
+    <script src="converter.js"></script>
+</body>
+</html>
